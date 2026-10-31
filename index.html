@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#8b1538" />
+    <title>PUPScan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="left-head">
+        <div class="menu-wrap">
+          <button
+            id="menuToggle"
+            class="icon-button hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <nav
+            id="navMenu"
+            class="nav-menu hidden"
+            aria-label="Main navigation"
+          ></nav>
+        </div>
+        <button id="brandHome" class="brand" aria-label="Go to overview">
+          <span class="brand-mark"><img src="image.png" alt="PUPScan Logo"/></span>
+          <span
+            ><strong>PUPScan</strong><small>PUP - Quezon City Campus</small></span
+          >
+        </button>
+      </div>
+      <div class="header-actions">
+        <button id="qrButton" class="qr-button">
+          <span aria-hidden="true">⛶</span
+          ><span id="qrLabel">Attendance QR</span>
+        </button>
+        <button
+          id="notificationsButton"
+          class="notification-button"
+          aria-label="Notifications"
+          title="Notifications"
+        >
+          <span aria-hidden="true">⩍</span><i id="notificationDot"></i>
+        </button>
+        <select
+          id="roleSelect"
+          class="role-select"
+          aria-label="Choose workspace"
+        >
+          <option>Instructor</option>
+          <option>Student</option>
+          <option>Administrator</option>
+        </select>
+        <button id="profileButton" class="profile-button">
+          <span class="avatar" id="avatar">CB</span
+          ><span class="profile-text"
+            ><strong id="profileName">Cristian Balatbat</strong
+            ><small id="profileRole">Instructor</small></span
+          ><span>⮟</span>
+        </button>
+        <div id="profileMenu" class="profile-menu hidden">
+          <button id="switchRole">Switch workspace</button>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="page-heading">
+        <div>
+          <div id="dateLine" class="date-line"></div>
+          <h1 id="pageTitle">Good day, Instructor</h1>
+          <p id="pageSubtitle">
+            Here is a summary of your classes and attendance activity.
+          </p>
+        </div>
+        <button id="createSession" class="primary-button">
+          ＋ Create session
+        </button>
+      </div>
+      <section id="pageContent"></section>
+    </main>
+    <footer class="site-footer">
+      <strong>PUPScan</strong
+      ><span
+        >Polytechnic University of the Philippines - Quezon City Campus</span
+      ><span>Attendance Management System</span>
+    </footer>
+    <div id="toast" class="toast hidden" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
